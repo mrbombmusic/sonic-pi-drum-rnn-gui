@@ -8,7 +8,7 @@ The control is always in the human’s hand. There is the ability to alter and e
 
 There is also the option to move from the interface to the Sonic PI IDE and add additional sounds and instruments. The user also has the option to change and add different samples into Sonic Pi to change the sounds being played.
 
-All sounds and timing are handled in Sonic Pi. The graphic user interface is a mix of HTML, CSS and https://nexus-js.github.io/ui/ - automatic![NexusUI](https://nexus-js.github.io/ui/). The GUI is meant to provide a more accessible way to engage with Machine learning as a tool for performance without needing to know the technical aspects. The GUI provides visual representations of the Model output.
+All sounds and timing are handled in Sonic Pi. The graphic user interface is a mix of HTML, CSS and ![NexusUI](https://nexus-js.github.io/ui/). The GUI is meant to provide a more accessible way to engage with Machine learning as a tool for performance without needing to know the technical aspects. The GUI provides visual representations of the Model output.
 
 <h2>What you need</h2>
 This project uses the p5js-OSC library and modified code examples by Gene Kogan to handle the OSC messaging between the GUI and Sonic Pi. 
