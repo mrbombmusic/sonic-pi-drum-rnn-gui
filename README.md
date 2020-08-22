@@ -9,8 +9,25 @@ There is also the option to move from the interface to the Sonic PI IDE and add 
 
 All sounds and timing are handled in Sonic Pi. The graphic user interface is meant to provide a more accessible way to engage with Machine learning as a tool for performance without needing to know the technical aspects. The GUI provides visual representations of the Model output.
 
+<h2>What you need</h2>
 This project uses the p5js-OSC library and modified code examples by Gene Kogan to handle the OSC messaging between the GUI and Sonic Pi. 
 Go to this link for info on how to download and install: https://github.com/genekogan/p5js-osc
+
+You will also need to download Sonic Pi. This code is for Sonic Pi v3.2.0
+Go to this link for info on how to download and install: https://sonic-pi.net/
+
+<h2>Getting Started</h2>
+
+1. Start p5js-osc in terminal
+
+2. Create local server
+
+3. Open GUI Code
+
+4. Paste Sonic Pi code into an empty buffer in the Sonic Pi IDE
+Note: The Sonic Pi code will not run until you chosen a drum kit and have sent at least one beat from the GUI.
+
+
 
 
 
