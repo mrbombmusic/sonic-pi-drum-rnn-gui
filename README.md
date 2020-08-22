@@ -1,6 +1,6 @@
 # sonic-pi-drum-rnn-gui
-A GUI that uses Magenta Drum RNN to create and generate drum patterns to send to Sonic Pi via OSC.
-![screenshot](Sonic Pi DrumRNN Gui.png)
+A GUI that uses Magenta Drum RNN to create and generate drum patterns to send to Sonic Pi via OSC.<br>
+![screenshot](https://github.com/mrbombmusic/sonic-pi-drum-rnn-gui/blob/master/Sonic%20PI%20DrumRNN%20GUI.png)
 
 This project was created as a way to incorporate machine learning into a live coding performative context. It aims to make the collaborative process between musician and machine learning model happen in real time in an ongoing feedback cycle where the machine makes output based on the human and then the human can in turn react to the model output, creating an ongoing interactive loop that takes place within the context of a performance.
 
