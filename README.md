@@ -30,11 +30,11 @@ Go to this link for info on how to download and install: https://sonic-pi.net/
 
 5. Set up GUI and Sonic Pi in split screen.
 
-6. Start Sonic PI code by pressing 'run'
+6. Start Sonic PI code by pressing ***run***
 
 7. Select drum kit using drop down menu.
 
-8. Enter drum beat in Original Drum Pattern Grid then press 'send beat'
+8. Enter drum beat in **Original Drum Pattern** Grid then press ***send beat***
 
 See this video for how to use all features in this project: https://youtu.be/9GHz_-xZPQs
 
