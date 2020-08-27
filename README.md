@@ -23,10 +23,20 @@ Go to this link for info on how to download and install: https://sonic-pi.net/
 
 2. Create local server
 
-3. Open GUI Code
+3. Open GUI project in browser.
 
 4. Paste Sonic Pi code into an empty buffer in the Sonic Pi IDE <br>
 **Note:** The Sonic Pi code will not run until you chosen a drum kit and have sent at least one beat from the GUI.
+
+5. Set up GUI and Sonic Pi in split screen.
+
+6. Start Sonic PI code by pressing 'run'
+
+7. Select drum kit using drop down menu.
+
+8. Enter drum beat in Original Drum Pattern Grid then press 'send beat'
+
+See this video for how to use all features in this project: https://youtu.be/9GHz_-xZPQs
 
 
 
