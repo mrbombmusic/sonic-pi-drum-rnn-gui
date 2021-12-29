@@ -33,17 +33,16 @@ samples = [
     :elec_twip
   ],
   [
- #insert samples here
+    #insert samples here
   ], [
-  #insert samples here
+    #insert samples here
   ], [
-  #insert samples here
+    #insert samples here
   ]
 ]
 
 step = []
 midiNotes = []
-i = 0
 
 live_loop :receivedNewDrums do
   use_real_time
@@ -76,18 +75,15 @@ end
 
 a = 1.4
 
-live_loop :playDrumPatterns do
-  midiNotes = get[:notes]
-  step = get[:steps]
-  genNote = get[:genNotes]
-  genStep = get[:genSteps]
+live_loop :playDrumPatterns, sync: :selectKit do
+  midiNotes = get[:notes] || []
+  step = get[:steps] || []
+  genNote = get[:genNotes] || []
+  genStep = get[:genSteps] || []
   playGen = get[:playGenOrNot]
-  if i == nil
-    i = 0
-  else
-    i = get[:kit]
-    i = i[0].to_i
-  end
+
+  i = get[:kit][0].to_i
+
   dr = { samples[i][0] => 36,
          samples[i][1] =>  46,
          samples[i][2] =>  38,
@@ -98,32 +94,32 @@ live_loop :playDrumPatterns do
          samples[i][7] =>  49,
          samples[i][8] => 45
          }
-  
-  if playGen[0] == 1 || playGen[0] == 2
-    16.times do |i|
-      for x in 0..midiNotes.length do
+
+  if playGen
+    if playGen[0] == 1 || playGen[0] == 2
+      16.times do |i|
+        for x in 0..midiNotes.length do
           if step[x] == i
-            sample dr.index(midiNotes[x]), amp: a
+            sample dr.select{|k,v| v == midiNotes[x]}.keys.first, amp: a
           end
         end
         osc "/druminfo", i, 0
         sleep 0.25
       end
     end
-    
+
     if playGen[0] == 0 || playGen[0] == 2
       16.times do |i|
         for x in 0..genNote.length do
-            if genStep[x] == i
-              sample dr.index(genNote[x]), amp: a
-              puts dr.index(genNote[x])
-            end
+          if genStep[x] == i
+            sample dr.select{|k,v| v == genNote[x]}.keys.first, amp: a
           end
-          osc "/druminfo", i, 1
-          sleep 0.25
         end
+        osc "/druminfo", i, 1
+        sleep 0.25
       end
     end
-    
-    
-    
+  else
+    sleep 0.25
+  end
+end
